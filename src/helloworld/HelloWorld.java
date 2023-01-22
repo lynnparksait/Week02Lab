@@ -5,6 +5,8 @@
  */
 package helloworld;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 /**
  *
  * @author lynnh
@@ -15,7 +17,17 @@ public class HelloWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) { 
-        // TODO code application logic here
-    }
-    
+        	System.out.println("Current Time is: ");
+		String str = null;
+		System.out.print(CurrentDateTime(str));
+
+	}
+
+	public static LocalDateTime CurrentDateTime(String str) {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+		LocalDateTime now = LocalDateTime.now();  
+		
+		return now;
+	}
+		
 }
